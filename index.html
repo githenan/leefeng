@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>githenan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="做自己爱做的事，爱自己在做的事！">
+<meta property="og:type" content="website">
+<meta property="og:title" content="githenan">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="githenan">
+<meta property="og:description" content="做自己爱做的事，爱自己在做的事！">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="githenan">
+<meta name="twitter:description" content="做自己爱做的事，爱自己在做的事！">
+  
+    <link rel="alternate" href="/atom.xml" title="githenan" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">githenan</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">leefeng</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-Git教程" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/02/23/Git教程/" class="article-date">
+  <time datetime="2019-02-22T18:31:40.000Z" itemprop="datePublished">2019-02-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/02/23/Git教程/">Git教程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="安装完成后，在命令行输入："><a href="#安装完成后，在命令行输入：" class="headerlink" title="安装完成后，在命令行输入："></a>安装完成后，在命令行输入：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;Leefeng&quot;</span><br><span class="line">git config --global user.email &quot;2229405950@qq.com&quot;</span><br><span class="line"></span><br><span class="line">注意：git config命令的--global参数，用了这个参数，表示你这台机器上所有的Git仓库都会使用这个配置，当然也可以对某个仓库指定不同的用户名和Email地址。</span><br></pre></td></tr></table></figure>
+<h3 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">第一步：创建一个空目录</span><br><span class="line">	mkdir githenan.leefeng</span><br><span class="line">	cd githenan.leefeng</span><br><span class="line">第二步：通过git init命令把这个目录变成Git可以管理的仓库</span><br><span class="line">	git init</span><br></pre></td></tr></table></figure>
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">git add readme.md 		可反复多次使用，添加多个文件</span><br><span class="line">git commit -m &quot;message&quot; 	可以一次提交很多文件</span><br><span class="line">git status			查看仓库当前的状态</span><br><span class="line">git diff readme.md 		查看difference，可以查看修改内容</span><br><span class="line">git log				查看提交历史，以便确定要回退到哪个版本</span><br><span class="line">git log --pretty=oneline 	如果嫌输出信息太多日志信息，可加后面参数</span><br><span class="line">git reset --hard HEAD^ 		上一个版本就是HEAD^，上上一个版本就是HEAD^^，当然往上100个版本写100个^比较容易数不过来，所以写成HEAD~100</span><br><span class="line">git reset --hard 1094a 		</span><br><span class="line">git reflog			查看命令历史，以便确定要回到未来的哪个版本。</span><br><span class="line">git rm readme.md 		删除文件</span><br><span class="line">git checkout -- readme.md	丢弃工作区的修改（可以很轻松地把误删的文件恢复到最新版本）</span><br></pre></td></tr></table></figure>
+<h3 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:githenan/leefeng.git</span><br><span class="line"></span><br><span class="line">git remote add origin git@github.com:githenan/leefeng.git</span><br><span class="line">远程库的名字就是origin，这是Git默认的叫法，也可以改成别的，但是origin这个名字一看就知道是远程库。</span><br><span class="line"></span><br><span class="line">git push -u origin master 		</span><br><span class="line">把本地库的所有内容推送到远程库上。</span><br><span class="line">由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，</span><br><span class="line">还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/02/23/Git教程/" data-id="cjsgf81m70000sokhjnz8xmt0" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/02/23/hello-world/" class="article-date">
+  <time datetime="2019-02-22T18:17:47.653Z" itemprop="datePublished">2019-02-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/02/23/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/02/23/hello-world/" data-id="cjsgf81mc0002sokhaykagvzg" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Hexo创建网站、文章并发布举例" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/02/18/Hexo创建网站、文章并发布举例/" class="article-date">
+  <time datetime="2019-02-18T09:15:51.000Z" itemprop="datePublished">2019-02-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/02/18/Hexo创建网站、文章并发布举例/">Hexo创建网站、文章并发布举例</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="新建一个网站"><a href="#新建一个网站" class="headerlink" title="新建一个网站"></a>新建一个网站</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init git.leefeng</span><br></pre></td></tr></table></figure>
+<h3 id="新建一篇文章"><a href="#新建一篇文章" class="headerlink" title="新建一篇文章"></a>新建一篇文章</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new demo</span><br></pre></td></tr></table></figure>
+<h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+<h3 id="启动服务器"><a href="#启动服务器" class="headerlink" title="启动服务器"></a>启动服务器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<h3 id="安装-hexo-deployer-git"><a href="#安装-hexo-deployer-git" class="headerlink" title="安装 hexo-deployer-git"></a>安装 hexo-deployer-git</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<h3 id="修改配置文件-config-yml"><a href="#修改配置文件-config-yml" class="headerlink" title="修改配置文件_config.yml"></a>修改配置文件_config.yml</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: githenan</span><br><span class="line">subtitle: leefeng</span><br><span class="line">description: 做自己爱做的事，爱自己在做的事！</span><br><span class="line">keywords:</span><br><span class="line">author: Leefeng</span><br><span class="line">language: zh-Hans</span><br><span class="line">timezone: Asia/Shanghai</span><br><span class="line"></span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/githenan/leefeng.git</span><br><span class="line">  branch: hexo</span><br></pre></td></tr></table></figure>
+<h3 id="将网站部署到服务器上"><a href="#将网站部署到服务器上" class="headerlink" title="将网站部署到服务器上"></a>将网站部署到服务器上</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
+<h1 id="在线预览文章生成的index-html文件"><a href="#在线预览文章生成的index-html文件" class="headerlink" title="在线预览文章生成的index.html文件"></a>在线预览文章生成的index.html文件</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">http://htmlpreview.github.io/?https://github.com/githenan/oracle/blob/gh-pages/2019/02/18/leefeng/index.html</span><br><span class="line">就是&quot;https://github.com/githenan/oracle/blob/gh-pages/2019/02/18/leefeng/index.html&quot;之前加上&quot;http://htmlpreview.github.io/?&quot;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/02/18/Hexo创建网站、文章并发布举例/" data-id="cjsgf81mb0001sokhd75cn5fz" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-adult-url" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/02/18/adult-url/" class="article-date">
+  <time datetime="2019-02-18T08:39:48.000Z" itemprop="datePublished">2019-02-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/02/18/adult-url/">adult_url</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://www.whichav.video/" target="_blank" rel="noopener">https://www.whichav.video/</a></p>
+<p>阿拉伯色情<br>    <a href="https://www.inx4you.com/" target="_blank" rel="noopener">https://www.inx4you.com/</a><br>    <a href="http://www.arxhamster.com/" target="_blank" rel="noopener">http://www.arxhamster.com/</a><br>    <a href="https://www.arabianchicks.com/" target="_blank" rel="noopener">https://www.arabianchicks.com/</a><br>    <a href="https://www.aflamneek.com/" target="_blank" rel="noopener">https://www.aflamneek.com/</a><br>黑人色情<br>    <a href="https://www.myfreeblack.com/?utm_source=www.whichav.video" target="_blank" rel="noopener">https://www.myfreeblack.com/?utm_source=www.whichav.video</a><br>    <a href="http://homegrownfreaks.net/?utm_source=www.whichav.video" target="_blank" rel="noopener">http://homegrownfreaks.net/?utm_source=www.whichav.video</a><br>    <a href="https://www.shesfreaky.com/?utm_source=www.whichav.video" target="_blank" rel="noopener">https://www.shesfreaky.com/?utm_source=www.whichav.video</a><br>    <a href="http://www.shegotass.info/?utm_source=www.whichav.video" target="_blank" rel="noopener">http://www.shegotass.info/?utm_source=www.whichav.video</a><br>    <a href="http://www.hoodamateurs.com/?utm_source=www.whichav.video" target="_blank" rel="noopener">http://www.hoodamateurs.com/?utm_source=www.whichav.video</a></p>
+<p>拉丁色情<br>    <a href="http://xvideosx.com.br/" target="_blank" rel="noopener">http://xvideosx.com.br/</a><br>    <a href="https://caiunoxvideos.com.br/" target="_blank" rel="noopener">https://caiunoxvideos.com.br/</a><br>    <a href="https://www.brasiltudoliberado.com/" target="_blank" rel="noopener">https://www.brasiltudoliberado.com/</a><br>    <a href="https://novinhasdozapzap.com/" target="_blank" rel="noopener">https://novinhasdozapzap.com/</a><br>    <a href="https://www.novinhagozada.com/" target="_blank" rel="noopener">https://www.novinhagozada.com/</a><br>    <a href="https://www.safadasamadoras.com/caiu-na-net/" target="_blank" rel="noopener">https://www.safadasamadoras.com/caiu-na-net/</a><br>    <a href="http://kabinedasnovinhas.com/" target="_blank" rel="noopener">http://kabinedasnovinhas.com/</a><br>    <a href="http://colegialasdeverdad.com/" target="_blank" rel="noopener">http://colegialasdeverdad.com/</a><br>    <a href="http://mamasijaya.me/" target="_blank" rel="noopener">http://mamasijaya.me/</a><br>    <a href="https://www.novinhasdozap.com/" target="_blank" rel="noopener">https://www.novinhasdozap.com/</a></p>
+<p>性癖黄网<br>    <a href="http://shockingmovies.com/" target="_blank" rel="noopener">http://shockingmovies.com/</a><br>    <a href="https://www.feet9.com/" target="_blank" rel="noopener">https://www.feet9.com/</a><br>    <a href="https://www.spankingtube.com/i" target="_blank" rel="noopener">https://www.spankingtube.com/i</a><br>    <a href="https://www.slavestube.com/" target="_blank" rel="noopener">https://www.slavestube.com/</a><br>    <a href="https://www.ballbustingtube.com/" target="_blank" rel="noopener">https://www.ballbustingtube.com/</a></p>
+<p>极端色情<br>    <a href="https://crazyshit.com/?utm_source=www.whichav.video" target="_blank" rel="noopener">https://crazyshit.com/?utm_source=www.whichav.video</a><br>    <a href="https://www.xrares.com/?utm_source=www.whichav.video" target="_blank" rel="noopener">https://www.xrares.com/?utm_source=www.whichav.video</a><br>    <a href="https://www.kaotic.com/?utm_source=www.whichav.video" target="_blank" rel="noopener">https://www.kaotic.com/?utm_source=www.whichav.video</a><br>    <a href="http://superzooi.com/?utm_source=www.whichav.video" target="_blank" rel="noopener">http://superzooi.com/?utm_source=www.whichav.video</a><br>    <a href="https://reblop.com/videos/?utm_source=www.whichav.video" target="_blank" rel="noopener">https://reblop.com/videos/?utm_source=www.whichav.video</a></p>
+<p>dongtaiwang.net</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/02/18/adult-url/" data-id="cjsgf81mk0003sokhjfv5x2ga" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/02/23/Git教程/">Git教程</a>
+          </li>
+        
+          <li>
+            <a href="/2019/02/23/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2019/02/18/Hexo创建网站、文章并发布举例/">Hexo创建网站、文章并发布举例</a>
+          </li>
+        
+          <li>
+            <a href="/2019/02/18/adult-url/">adult_url</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Leefeng<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
